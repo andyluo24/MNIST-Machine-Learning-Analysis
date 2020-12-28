@@ -27,7 +27,7 @@ y_train_array = np.asarray(y_train)
 y_test_array = np.asarray(y_test)
 
 ## Use k-means to build a dictionary of 10 x 10 image patches clustering in 50 
-## centers.
+## centers. (part 1)
 
 def splitingPatch(array):
     patches = np.zeros((60000, 16,100))
@@ -102,7 +102,8 @@ for i in range(50):
 ## There are 2500 entries in this dictionary. Create a set of 10 x 10 patches 
 ## on an overlapping 4 x 4 grid for each test image and result in a total of 144
 ## patches for each test image. Use the dictionary to find the closest center 
-## to each patch and construct a histogram of patches for each test image.
+## to each patch and construct a histogram of patches for each test image. 
+## (part 2)
 
 # Extend the image 28x28 to 30x30 then split it into 9 patches.
 def Expanding144(array, idx):
@@ -163,7 +164,7 @@ for i in range (10000):
   histogram1.append(resultLevel2)
 
 ## Train a decision forest classifier based on the historgram of patches and 
-## check the accuracy of this classifier on the testing data
+## check the accuracy of this classifier on the testing data. (part 3)
 
 print(y_train_array.shape)
 new_y_train = y_train_array
