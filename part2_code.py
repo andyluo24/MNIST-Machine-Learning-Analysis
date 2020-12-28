@@ -99,10 +99,10 @@ Kmean2 = KMeans(n_clusters = 50)
 for i in range(50):
   dictModels[i] = Kmean2.fit(new_dict[i])
 
-## There are 2500 entries in this dictionary. Create a set of 10 x 10 patches 
-## on an overlapping 4 x 4 grid for each test image and result in a total of 144
-## patches for each test image. Use the dictionary to find the closest center 
-## to each patch and construct a histogram of patches for each test image. 
+## Create a set of 10 x 10 patches on an overlapping 4 x 4 grid for each query 
+## image and result in a total of 144 patches for each test image. Use the 
+## dictionary to find the closest center to each patch and construct a histogram 
+## of patches for each test image. 
 ## (part 2)
 
 # Extend the image 28x28 to 30x30 then split it into 9 patches.
